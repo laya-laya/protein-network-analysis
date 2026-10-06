@@ -342,9 +342,9 @@ Each method answers "which nodes must receive a control signal?" under different
 
 **Exact controllability, as implemented in [`PBH.ipynb`](PBH.ipynb).** For an undirected network with symmetric adjacency matrix $A$, the minimum number of driver nodes is the largest geometric multiplicity of any eigenvalue of $A$ (Yuan et al., 2013):
 
-$$
-N_D = \max_i \left[ N - \operatorname{rank}\left(\lambda_i I_N - A\right) \right]
-$$
+
+$N_D = \max_i \left[ N - \operatorname{rank}\left(\lambda_i I_N - A\right) \right]$
+
 
 To find which nodes are drivers, the notebook takes the eigenvalue $\lambda_M$ that attains this maximum and row-reduces $A - \lambda_M I_N$. Nodes whose columns are not pivot columns are linearly dependent on the others, and they are the driver nodes.
 
